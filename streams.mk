@@ -1,9 +1,10 @@
 # RT Shell files.
+STREAMS_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
+
 STREAMSSRC = \
-		./chprintf.c \
-		$(CHIBIOS)/os/hal/lib/streams/memstreams.c \
-		$(CHIBIOS)/os/hal/lib/streams/nullstreams.c
+		$(STREAMS_DIR)chprintf.c \
+		$(STREAMS_DIR)memstreams.c \
+		$(STREAMS_DIR)nullstreams.c
 
 STREAMSINC = \
-		./ \
-		$(CHIBIOS)/os/hal/lib/streams
+		$(STREAMS_DIR)
