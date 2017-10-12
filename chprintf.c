@@ -91,7 +91,7 @@ static char *ftoa(char *p, double num, unsigned long precision) {
   return long_to_string_with_divisor(p, l, 10, precision / 10);
 }
 #if CHPRINTF_USE_EXP
-inline unsigned int ftou(float x)
+static unsigned int ftou(float x)
 {
   union {
     float   f;
